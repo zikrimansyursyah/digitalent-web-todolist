@@ -1,0 +1,30 @@
+.card {
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  border: none;
+  position: relative;
+  min-height: 8rem;
+  cursor: pointer;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.task-theme {
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  padding: .1rem .5rem;
+  font-weight: 600;
+}
+
+.badges {
+  padding: .1rem .5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.badges[ariaColor="1"] {
+  background-color: #F9CEEE;
+}

@@ -1,6 +1,7 @@
 .board {
   background-color: #F2F2F2;
   border-radius: 10px;
+  max-width: 90vw;
   height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -12,7 +13,7 @@
 }
 
 .task-wrapper {
-  padding: .7rem 1rem 0;
+  padding: .7rem 1rem .5rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -61,41 +62,8 @@
   background-color: transparent;
 }
 
-.board-footer > button {
-  padding: .1rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background-color: #B3E8E5;
-  font-weight: 600;
-}
-
-.card {
-  padding: 1rem;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-  border: none;
-  position: relative;
-  min-height: 8rem;
-}
-
-.card-title {
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.task-theme {
-  border: 1px solid #c4c4c4;
-  border-radius: 8px;
-  padding: .1rem .5rem;
-  font-weight: 600;
-}
-
-.badges {
-  padding: .1rem .5rem;
-  border-radius: 8px;
-  font-weight: 600;
-}
-
-.badges[ariaColor="1"] {
-  background-color: #F9CEEE;
+@media (min-width: 425px) {
+  .board {
+    max-width: 400px;
+  }
 }
