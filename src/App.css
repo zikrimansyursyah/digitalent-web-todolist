@@ -44,16 +44,6 @@
   z-index: 1;
 }
 
-.board-footer > label {
-  position: absolute;
-  right: 5.5rem;
-  top: 9px;
-  border: 1px solid #dedede;
-  border-radius: 4px;
-  padding: .25rem 1rem;
-  background-color: #F2F2F2;
-}
-
 .board-footer > input {
   width: 100%;
   border: none;
