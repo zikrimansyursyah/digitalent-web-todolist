@@ -15,8 +15,39 @@
   background-color: white;
   border-radius: 10px;
   padding: 2rem 1rem;
-  min-width: 30vw;
-  max-width: 30vw;
+  min-width: 90vw;
   min-height: 50vh;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.title {
+  padding: 0 1rem;
+  font-size: 24px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  outline: none;
+}
+
+.title:focus {
+  border-color:#dedede;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 728px ) {
+  .detail-wrapper {
+    min-width: 70vw;
+  }
+}
+
+@media (min-width: 1024px ) {
+  .detail-wrapper {
+    min-width: 50vw;
+  }
+}
+
+@media (min-width: 1366px ) {
+  .detail-wrapper {
+    min-width: 35vw;
+  }
 }

@@ -7,7 +7,10 @@ function App() {
   const [inputAdd, setInputAdd] = useState(null);
   const [listCard, setListCard] = useState([]);
   const [total, setTotal] = useState(0);
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState({
+    isOpen: false,
+    data: null,
+  });
 
   useEffect(() => {
     const taskList = window.localStorage.getItem("task-list");
@@ -39,17 +42,21 @@ function App() {
         title: inputAdd,
         theme: `TS-${total + 1}`,
         badges: null,
+        description: null,
+        priority: null,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
     setTotal((prev) => prev + 1);
     window.localStorage.setItem("total-task", total + 1);
     document.getElementById("add-task").value = "";
     setInputAdd(null);
-  }
+  };
 
-  const handleOpenModal = () => {
-
-  }
+  const handleOpenModal = (item) => {
+    setModal({ isOpen: true, data: item });
+  };
 
   return (
     <>
@@ -62,12 +69,9 @@ function App() {
           {(listCard || []).map((item, index) => (
             <Card
               key={index}
-              title={item.title}
-              theme={item.theme}
-              badges={item.badges}
+              taskData={item}
               setListCard={setListCard}
-              setOpenModal={setModal}
-              setModalData={handleOpenModal}
+              handleModal={handleOpenModal}
             />
           ))}
         </div>
@@ -85,7 +89,11 @@ function App() {
           </button>
         </form>
       </div>
-      <CardDetail isOpen={modal} setOpenModal={setModal} />
+      <CardDetail
+        modal={modal}
+        setOpenModal={setModal}
+        setListCard={setListCard}
+      />
     </>
   );
 }
