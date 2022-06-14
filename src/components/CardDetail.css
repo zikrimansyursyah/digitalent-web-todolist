@@ -1,0 +1,22 @@
+.details {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(0, 0, 0, 0,2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.detail-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  min-width: 30vw;
+  max-width: 30vw;
+  min-height: 50vh;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}

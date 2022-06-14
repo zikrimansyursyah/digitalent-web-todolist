@@ -1,12 +1,13 @@
 import './card.css';
 
-export default function Card({ title, theme, badges, setListCard }) {
-  function handleDelete() {
+export default function Card({ title, theme, badges, setListCard, setOpenModal, setModalData }) {
+  const handleDelete = (e) => {
+    e.stopPropagation();
     setListCard((prev) => prev.filter((item) => item.theme !== theme));
   }
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => setOpenModal(true)}>
       <div className="d-flex align-items-center justify-content-between">
         <div className="card-title">{title}</div>
         <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
